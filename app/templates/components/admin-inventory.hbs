@@ -1,0 +1,31 @@
+<div class="inner-box">
+  <h1>Inventory:</h1>
+  <div class="inventory-headings row">
+    <div class="col-xs-4">
+      <h4>Product Name:</h4>
+    </div>
+    <div class="col-xs-2">
+      <h4>Stock:</h4>
+    </div>
+  </div>
+  {{#each products as |product|}}
+    <div class="inventory-item row">
+      <div class="col-xs-4">
+        <p>{{product.name}}</p>
+      </div>
+      <div class="col-xs-2">
+        <p>{{product.quantity}}</p>
+      </div>
+      <div class="col-xs-3">
+        {{#if product.editFormOpen}}
+          <button {{action 'closeEditForm' product}} class='btn btn-warning'>Cancel</button>
+        {{else}}
+          <button {{action 'openEditForm' product}} class='btn btn-info'>Edit</button>
+        {{/if}}
+      </div>
+      <div class="col-xs-3">
+        <button {{action 'delete1' product}} class='btn btn-danger'>Delete</button>
+      </div>
+    </div>
+  {{/each}}
+</div>

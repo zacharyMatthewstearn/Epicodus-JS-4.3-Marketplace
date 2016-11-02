@@ -6,5 +6,6 @@ export default DS.Model.extend({
   blurb: DS.attr(),
   price: DS.attr(),
   quantity: DS.attr(),
-  description: DS.attr()
+  description: DS.attr(),
+  editFormOpen: DS.attr()
 });

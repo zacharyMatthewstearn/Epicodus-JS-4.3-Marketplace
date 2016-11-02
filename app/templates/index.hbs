@@ -1,5 +1,9 @@
 {{!-- {{user-login users=model confirmLogin2="confirmLogin3"}} --}}
 
+{{#link-to 'admin'}}
+  <button class="btn btn-primary">Get thee to an admin page!</button>
+{{/link-to}}
+
 {{#each model.products as |product|}}
   {{product-tile product=product}}
 {{else}}
