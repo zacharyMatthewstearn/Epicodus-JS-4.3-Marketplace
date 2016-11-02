@@ -1,0 +1,7 @@
+{{!-- {{user-login users=model confirmLogin2="confirmLogin3"}} --}}
+
+{{#each model.products as |product|}}
+  {{product-tile product=product}}
+{{else}}
+  <h1>Out of stock for EVERYTHING!</h1>
+{{/each}}

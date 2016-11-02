@@ -1,0 +1,48 @@
+body {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  h1{
+    text-shadow: 0 0 50px gold;
+  }
+}
+.jumbotron {
+  background-color: black;
+  text-shadow: 0 0 15px gold;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.tile,
+.details {
+  background-color: rgba(0,0,0,0.2);
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 2.5%;
+  img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 15px;
+  }
+}
+.tile {
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+.out-of-stock {
+  color: crimson;
+}

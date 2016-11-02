@@ -1,0 +1,12 @@
+{{#if loginMenuOpen}}
+  <button class="btn btn-primary" {{action 'closeLoginMenu'}}>Cancel</button>
+  <form>
+    <label for="input-username">Username:</label>
+    {{input type='text' id='input-username' value=username}}
+    <label for="input-password">Password:</label>
+    {{input type='password' id='input-password' value=password}}
+    <button class="btn btn-primary" {{action 'confirmLogin1'}}>Confirm</button>
+  </form>
+{{else}}
+  <button class="btn btn-primary" {{action 'openLoginMenu'}}>Login</button>
+{{/if}}

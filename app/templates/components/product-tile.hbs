@@ -1,0 +1,14 @@
+<div class="tile">
+  {{#link-to 'product' product.id}}
+  <img src={{product.image}}>
+  <h2>{{product.name}}</h2>
+  <h3>{{product.blurb}}</h3>
+  {{#if product.quantity}}
+    <h4>Only {{product.quantity}} left in stock!</h4>
+  {{else}}
+    <h4 class="out-of-stock">Out of stock!</h4>
+  {{/if}}
+  <h2>${{product.price}}</h2>
+  {{/link-to}}
+  <button type="button" class="btn btn-primary" name="button-add-to-cart">Add to Cart</button>
+</div>
