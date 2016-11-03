@@ -14,6 +14,9 @@ export default Ember.Service.extend({
 
   addPrice(price) {
     this.set('cartTotalPrice', this.get('cartTotalPrice') + price);
-    console.log(price);
+  },
+
+  subtractPrice(price) {
+    this.set('cartTotalPrice', this.get('cartTotalPrice') - price);
   }
 });
