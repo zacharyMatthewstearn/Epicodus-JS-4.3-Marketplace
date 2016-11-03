@@ -8,6 +8,24 @@ export default Ember.Route.extend({
     });
   },
   actions: {
+    removeFromStock1(product, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          product.set(key,params[key]);
+        }
+      });
+      // product.save();
+      console.log("Quantity: " + product.get('quantity'));
+    },
+    putBackOnShelf1(product, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          product.set(key,params[key]);
+        }
+      });
+      // product.save();
+      console.log("Quantity: " + product.get('quantity'));
+    },
     confirmLogin3() {
       // var temp = this.model();
       // for(var i = 0; i < temp.length; i++) {

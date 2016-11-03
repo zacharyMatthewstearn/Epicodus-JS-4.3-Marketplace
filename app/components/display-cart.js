@@ -15,6 +15,11 @@ export default Ember.Component.extend({
       var price = parseInt(product.get('price'));
       this.get('shoppingCart').remove(product);
       this.get('shoppingCart').subtractPrice(price);
+
+      var params = {
+        quantity: product.set('quantity', product.get('quantity')+1)
+      };
+      this.sendAction('putBackOnShelf', product, params);
     }
   }
 });

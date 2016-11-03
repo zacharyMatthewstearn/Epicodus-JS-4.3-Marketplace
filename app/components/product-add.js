@@ -7,8 +7,8 @@ export default Ember.Component.extend({
         name: this.get('name'),
         image: this.get('image'),
         blurb: this.get('blurb'),
-        price: this.get('price'),
-        quantity: this.get('quantity'),
+        price: parseFloat(this.get('price')),
+        quantity: parseInt(this.get('quantity')),
         description: this.get('description'),
         editFormOpen: false
       };

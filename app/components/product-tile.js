@@ -5,9 +5,14 @@ export default Ember.Component.extend({
 
   actions: {
     addToCart(product) {
-      var price = parseInt(product.get('price'));
+      var price = product.get('price');
       this.get('shoppingCart').add(product);
       this.get('shoppingCart').addPrice(price);
+
+      var params = {
+        quantity: product.set('quantity', product.get('quantity')-1)
+      };
+      this.sendAction('removeFromStock', product, params);
     },
   }
 });

@@ -10,5 +10,7 @@
   {{/if}}
   <h2>${{product.price}}</h2>
   {{/link-to}}
-  <button type="button" class="btn btn-primary" name="button-add-to-cart" {{action 'addToCart' product}}>Add to Cart</button>
+  {{#if product.quantity}}
+    <button type="button" class="btn btn-primary" name="button-add-to-cart" {{action 'addToCart' product}}>Add to Cart</button>
+  {{/if}}
 </div>

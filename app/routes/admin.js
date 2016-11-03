@@ -27,7 +27,6 @@ export default Ember.Route.extend({
         }
       });
       product.save();
-      console.log("made it");
     },
     // openEditForm3(params) {
     //   this.set('editFormOpenForReal', true);
