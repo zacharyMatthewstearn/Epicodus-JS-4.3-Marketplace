@@ -9,20 +9,13 @@ export default Ember.Route.extend({
     saveProduct5(params) {
       var newProduct = this.store.createRecord('product', params);
       newProduct.save();
-      console.log(params.name);
-      console.log(params.image);
-      console.log(params.blurb);
-      console.log(params.price);
-      console.log(params.quantity);
-      console.log(params.description);
-      console.log(params.editFormOpen);
     },
     delete5(params) {
       params.destroyRecord();
     },
     update7(product, params) {
       Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
+        if(params[key] || params[key] === 0) {
           product.set(key,params[key]);
         }
       });

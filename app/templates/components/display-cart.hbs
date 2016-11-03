@@ -5,4 +5,8 @@
   <br>
 {{/each}}
 
-<h4>${{shoppingCart.cartTotalPrice}}</h4>
+{{#if shoppingCart.cartTotalPrice}}
+  <h4>${{shoppingCart.cartTotalPrice}}</h4>
+{{else}}
+  <h4><em>Cart is empty</em></h4>
+{{/if}}
