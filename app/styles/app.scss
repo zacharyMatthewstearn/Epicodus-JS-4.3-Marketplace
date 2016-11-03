@@ -47,9 +47,10 @@ textarea {
 .tile {
   display: inline-block;
   width: 22.5%;
-  float: left;
   word-wrap: break-word;
+  height: 524px;
 }
+
 .out-of-stock {
   color: crimson;
 }
@@ -97,4 +98,14 @@ textarea {
 }
 .col-xs-2 {
   border-left: 1px solid white;
+}
+
+#sidebar {
+  background-color: lightgrey;
+  color: black;
+  border-radius: 15px 0 0 15px;
+  border: 3px solid white;
+  border-right: none;
+  padding: 2rem;
+  margin-top: 13px;
 }

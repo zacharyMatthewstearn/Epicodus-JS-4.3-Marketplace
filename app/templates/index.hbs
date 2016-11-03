@@ -4,10 +4,15 @@
   <button class="btn btn-primary">Get thee to an admin page!</button>
 {{/link-to}}
 
-{{#each model.products as |product|}}
-  {{product-tile product=product}}
-{{else}}
-  <h1>Out of stock for EVERYTHING!</h1>
-{{/each}}
-
-{{display-cart}}
+<div class="row">
+  <div class="col-md-10">
+    {{#each model.products as |product|}}
+      {{product-tile product=product}}
+    {{else}}
+      <h1>Out of stock for EVERYTHING!</h1>
+    {{/each}}
+  </div>
+  <div id="sidebar" class="col-md-2">
+    {{display-cart}}
+  </div>
+</div>
