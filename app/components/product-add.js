@@ -9,7 +9,8 @@ export default Ember.Component.extend({
         blurb: this.get('blurb'),
         price: this.get('price'),
         quantity: this.get('quantity'),
-        description: this.get('description')
+        description: this.get('description'),
+        editFormOpen: false
       };
       if(params.name && params.image && params.blurb && params.price && params.quantity && params.description) {
         this.sendAction('saveProduct2', params);

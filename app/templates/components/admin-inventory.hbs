@@ -18,14 +18,17 @@
       </div>
       <div class="col-xs-3">
         {{#if product.editFormOpen}}
-          <button {{action 'closeEditForm' product}} class='btn btn-warning'>Cancel</button>
+          <button {{action 'closeEditForm1' product}} class='btn btn-warning'>Close</button>
         {{else}}
-          <button {{action 'openEditForm' product}} class='btn btn-info'>Edit</button>
+          <button {{action 'openEditForm1' product}} class='btn btn-info'>Edit</button>
         {{/if}}
       </div>
       <div class="col-xs-3">
         <button {{action 'delete1' product}} class='btn btn-danger'>Delete</button>
       </div>
     </div>
+    {{#if product.editFormOpen}}
+      {{product-update update2="update3" product=product}}
+    {{/if}}
   {{/each}}
 </div>

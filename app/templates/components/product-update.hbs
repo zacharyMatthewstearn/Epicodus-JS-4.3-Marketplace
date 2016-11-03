@@ -1,30 +1,33 @@
-<h1>Heyo!</h1>
+<div class="inner-box">
+  <h1>Edit Product: {{product.name}}</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label >Name</label>
+        {{input value=name  placeholder=product.name}}
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        {{input value=image  placeholder=product.image}}
+      </div>
+      <div class="form-group">
+        <label>Blurb</label>
+        {{input value=blurb  placeholder=product.blurb}}
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        {{input type="number" min="0" value=price  placeholder=product.price}}
+      </div>
+      <div class="form-group">
+        <label>Quantity</label>
+        {{input type="number" min="0" value=quantity placeholder=product.quantity}}
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        {{textarea rows="1" cols="18" value=description placeholder=product.description}}
+      </div>
 
-{{!-- <form>
-    <div class="form-group">
-      <label for="name">Name</label>
-      {{input value=name id="name" placeholder=product.name}}
-    </div>
-    <div class="form-group">
-      <label for="image">Image</label>
-      {{input value=image id="image" placeholder=product.image}}
-    </div>
-    <div class="form-group">
-      <label for="blurb">Blurb</label>
-      {{input value=blurb id="blurb" placeholder=product.blurb}}
-    </div>
-    <div class="form-group">
-      <label for="price">Price</label>
-      {{input type="number" min="0" value=price id="price" placeholder=product.price}}
-    </div>
-    <div class="form-group">
-      <label for="quantity">Quantity</label>
-      {{input type="number" min="0" value=quantity id="quantity" placeholder=product.quantity}}
-    </div>
-    <div class="form-group">
-      <label for="description">Description</label>
-      {{textarea rows="1" cols="18" value=description id="description" placeholder=product.description}}
-    </div>
-
-    <button {{action 'update1' product}}>Save</button>
-  </form> --}}
+      <button class="btn btn-primary" {{action 'update1' product}}>Update</button>
+    </form>
+  </div>
+</div>

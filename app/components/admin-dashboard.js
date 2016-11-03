@@ -6,21 +6,20 @@ export default Ember.Component.extend({
   //   return this.store.findAll('product');
   // },
   actions: {
-    // saveProduct3(params) {
-    //   this.sendAction('saveProduct4', params);
-    // },
+    saveProduct3(params) {
+      this.sendAction('saveProduct4', params);
+    },
     delete3(params) {
       this.sendAction('delete4', params);
     },
-    // update3(product, params) {
-    //   this.sendAction('update4', params);
-    // },
-    // openEditForm1(params) {
-    //   this.sendAction('openEditForm2', params);
-    // }
-    openEditForm1(params) {
+    update5(product, params) {
+      this.sendAction('update6', product, params);
+    },
+    openEditForm3(params) {
       this.set('editFormOpenForReal', true);
-      console.log("editFormOpenForReal: " + this.get('editFormOpenForReal'));
+    },
+    closeEditForm3(params) {
+      this.set('editFormOpenForReal', false);
     }
   }
 });

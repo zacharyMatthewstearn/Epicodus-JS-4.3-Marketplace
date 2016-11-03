@@ -1,13 +1,11 @@
 <div class="row">
   <div class="col-md-6">
-    {{#if editFormOpenForReal}}
-      <h1>hey</h1>
-      {{!-- {{product-update update2="update3" product=model}} --}}
-    {{else}}
-      <h1>yo</h1>
-      {{!-- {{product-add product=model saveProduct2="saveProduct3"}} --}}
-    {{/if}}
-    {{admin-inventory products=products delete2="delete3" openEditForm="openEditForm"}}
+    {{!-- {{#if editFormOpenForReal}} --}}
+      {{!-- {{product-update update2="update3" products=products}} --}}
+    {{!-- {{else}} --}}
+      {{product-add saveProduct2="saveProduct3"}}
+    {{!-- {{/if}} --}}
+    {{admin-inventory products=products delete2="delete3" openEditForm2="openEditForm3" closeEditForm2="closeEditForm3" update4="update5"}}
   </div>
   <div class="col-md-6">
     {{!-- tables --}}
