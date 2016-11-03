@@ -12,7 +12,7 @@ export default Ember.Component.extend({
 
   actions: {
     removeFromCart(product) {
-      var price = parseInt(product.get('price'));
+      var price = product.get('price');
       this.get('shoppingCart').remove(product);
       this.get('shoppingCart').subtractPrice(price);
 
