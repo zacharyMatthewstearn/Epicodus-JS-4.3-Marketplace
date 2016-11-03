@@ -1,8 +1,6 @@
 {{!-- {{user-login users=model confirmLogin2="confirmLogin3"}} --}}
 
-{{#link-to 'admin'}}
-  <button class="btn btn-primary">Get thee to an admin page!</button>
-{{/link-to}}
+
 
 <div class="row">
   <div class="col-md-10">
@@ -12,7 +10,12 @@
       <h1>Out of stock for EVERYTHING!</h1>
     {{/each}}
   </div>
-  <div id="sidebar" class="col-md-2">
-    {{display-cart putBackOnShelf="putBackOnShelf"}}
+  <div class="col-md-2">
+    {{#link-to 'admin'}}
+      <button id="admin-button" class="btn btn-primary">Get thee to an admin page!</button>
+    {{/link-to}}
+    <div id="sidebar">
+      {{display-cart putBackOnShelf="putBackOnShelf"}}
+    </div>
   </div>
 </div>

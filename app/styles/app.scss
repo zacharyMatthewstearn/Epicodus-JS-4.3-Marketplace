@@ -99,7 +99,9 @@ textarea {
 .col-xs-2 {
   border-left: 1px solid white;
 }
-
+.col-md-2 {
+  padding-right: 0 !important;
+}
 #sidebar {
   background-color: lightgrey;
   color: black;
@@ -107,5 +109,10 @@ textarea {
   border: 3px solid white;
   border-right: none;
   padding: 2rem;
-  margin-top: 13px;
+
+}
+
+#admin-button {
+  margin: 13px 0;
+  width: 100%;
 }
