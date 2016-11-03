@@ -1,5 +1,8 @@
 <h2>Cart</h2>
 {{#each shoppingCart.products as |product|}}
   {{product.name}} -- ${{product.price}}
+  <button class="btn btn-danger" {{action 'removeFromCart' product}}>Remove from cart</button>
   <br>
 {{/each}}
+
+<h4>${{shoppingCart.cartTotalPrice}}</h4>
