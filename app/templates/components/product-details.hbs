@@ -1,21 +1,28 @@
-<div class="details">
-  <div class="row">
-    <div class="col-md-6">
-      <img src={{product.image}}>
+<div class="row">
+  <div class="col-md-10">
+    <div class="details">
+      <div class="row">
+        <div class="col-md-6">
+          <img src={{product.image}}>
+        </div>
+        <div class="col-md-6">
+          <h2>{{product.name}}</h2>
+          <h3>{{product.blurb}}</h3>
+          <p>{{product.description}}</p>
+          {{#if product.quantity}}
+            <h4>Only {{product.quantity}} left in stock!</h4>
+          {{else}}
+            <h4 class="out-of-stock">Out of stock!</h4>
+          {{/if}}
+          <h2>${{product.price}}</h2>
+          {{#if product.quantity}}
+            <button type="button" class="btn btn-primary" name="button-add-to-cart" {{action 'addToCart' product}}>Add to Cart</button>
+          {{/if}}
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h2>{{product.name}}</h2>
-      <h3>{{product.blurb}}</h3>
-      <p>{{product.description}}</p>
-      {{#if product.quantity}}
-        <h4>Only {{product.quantity}} left in stock!</h4>
-      {{else}}
-        <h4 class="out-of-stock">Out of stock!</h4>
-      {{/if}}
-      <h2>${{product.price}}</h2>
-      {{#if product.quantity}}
-        <button type="button" class="btn btn-primary" name="button-add-to-cart" {{action 'addToCart' product}}>Add to Cart</button>
-      {{/if}}
-    </div>
+  </div>
+  <div id="sidebar" class="col-md-2">
+    {{display-cart putBackOnShelf="putBackOnShelf"}}
   </div>
 </div>
